@@ -142,7 +142,10 @@ Rails.application.routes.draw do
         resources :invoice_status, only: [ :index ]
         resource :domains, only: [ :show ], param: :name
         resource :contacts, only: [ :show ], param: :id
+        resource :results, only: [ :show ], param: :name
         # resource :auth, only: [ :index ]
+        get 'show_api_user', to: 'results#show_api_user'
+        get 'list_accreditated_api_users', to: 'results#list_accreditated_api_users'
         get 'auth', to: 'auth#index'
       end
 
@@ -345,6 +348,13 @@ Rails.application.routes.draw do
     resources :registrars do
       resources :api_users, except: %i[index]
       resources :white_ips
+
+      collection do
+        post 'set_test_date', to: 'registrars#set_test_date', as: 'set_test_date'
+        post 'remove_test_date', to: 'registrars#remove_test_date', as: 'remove_test_date'
+        post 'set_test_date_to_api_user', to: 'api_users#set_test_date_to_api_user', as: 'set_test_date_to_api_user'
+        post 'remove_test_date_to_api_user', to: 'api_users#remove_test_date_to_api_user', as: 'remove_test_date_to_api_user'
+      end
     end
 
     resources :contacts do
