@@ -234,4 +234,4 @@ registry_demo_registrar_api_user_url: 'http://registry.test/api/v1/accreditation
 registry_demo_accredited_users_url: 'http://registry.test/api/v1/accreditation_center/list_accreditated_api_users'
 a_and_aaaa_validation_timeout: '1'
 nameserver_validation_timeout: '1'
-
+allow_accr_endspoints: 'true'

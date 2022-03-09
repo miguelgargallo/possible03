@@ -10,4 +10,7 @@ class Feature
   #
   #   ENV['enable_lock_domain_with_new_statuses'] || false
   # end
+  def self.allow_accr_endspoints?
+    ENV['allow_accr_endspoints'] == 'true'
+  end
 end
