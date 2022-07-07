@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # core
 gem 'active_interaction', '~> 4.0'
-gem 'apipie-rails', '~> 0.5.19'
+gem 'apipie-rails', '~> 0.6.0'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'iso8601', '0.13.0' # for dates and times
 gem 'mimemagic', '0.4.3'
@@ -17,7 +17,7 @@ gem 'figaro', '~> 1.2'
 
 # model related
 gem 'paper_trail', '~> 12.1'
-gem 'pg',                        '1.3.5'
+gem 'pg',                        '1.4.1'
 # 1.8 is for Rails < 5.0
 gem 'ransack', '~> 2.6.0'
 gem 'truemail', '~> 2.4' # validates email by regexp, mail server existence and address existence
